@@ -1,0 +1,56 @@
+﻿<Page x:Class="Practica_3_kyrs.Admin_Orders"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Practica_3_kyrs"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Admin_Orders">
+
+    <Grid Background="DeepSkyBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="orders_table" Grid.Row="1" Grid.Column="5" Grid.RowSpan="6"/>
+        <Calendar x:Name="calendar" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+        <ComboBox Name="Client_box" Grid.Column="3" Grid.Row="1"/>
+        <ComboBox Name="Device_box" Grid.Column="3" Grid.Row="5"/>
+        <ComboBox Name="Work_box" Grid.Column="3" Grid.Row="6"/>
+        <TextBox x:Name="Cost_txt" Grid.Column="3" Grid.Row="7"/>
+
+        <Button x:Name="Work_btn" Grid.Column="0" Grid.Row="2" Background="White" Content="Тип работы" FontSize="7" Click="Work_btn_Click"/>
+        <Button x:Name="Device_btn" Grid.Column="0" Grid.Row="4" Background="White" Content="Тип устрйоства" FontSize="5" Click="Device_btn_Click"/>
+        <Button x:Name="back_btn" Grid.Column="0" Grid.Row="5"  Background="White" Content="Назад" Height="48" Margin="0,47,0,0" Grid.RowSpan="3" VerticalAlignment="Top" Click="back_btn_Click" />
+
+        <Grid Grid.Row="7" Grid.Column="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Add_btn" Content="Добавить" Grid.Column="0" Background="White" Click="Add_btn_Click"/>
+            <Button x:Name="Ren_btn" Content="Изменить" Background="White" Click="Ren_btn_Click" Grid.Column="1"/>
+            <Button x:Name="Del_btn" Content="Удалить" Grid.Column="2" Background="White" Click="Del_btn_Click"/>
+        </Grid>
+        <Frame x:Name="order_a_page" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="10"/>
+    </Grid>
+</Page>

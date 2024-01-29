@@ -1,0 +1,33 @@
+﻿<Window x:Class="Practica_3_kyrs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica_3_kyrs"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="Orange">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Авторизация" Grid.Column="1" Grid.Row="1" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBox x:Name="familii_txt" Grid.Column="1" Grid.Row="2" />
+        <TextBox x:Name="password_txt" Grid.Column="1" Grid.Row="3" />
+        <Button x:Name="autorization_btn" Content="Авторизируйтесь" Grid.Column="1" Grid.Row="4" Background="LightSalmon" Click="autorization_btn_Click"/>
+        <Button x:Name="registration_btn" Content="Зарегистрируйтесь" Grid.Column="1" Grid.Row="5" Background="LightSalmon" Click="registration_btn_Click"/>
+
+        <Frame x:Name="autarization_page" Grid.RowSpan="7" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden"/>
+    </Grid>
+   
+</Window>
